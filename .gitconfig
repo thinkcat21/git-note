@@ -1,0 +1,49 @@
+[user]
+[user]
+[push]
+	default = matching
+[core]
+	trustctime = false
+	editor = vim
+	filemode = false
+	quotepath = false
+[color]
+	ui = true
+[credential]
+	helper = cache --timeout=3600
+[diff]
+	tool = bc4
+	guitool = bc4
+[difftool]
+	prompt = false
+[difftool "bc4"]
+	cmd = "\"C:\\Program Files\\TortoiseSVN\\bin\\TortoiseMerge.exe\" \"$LOCAL\" \"$REMOTE\""
+[alias]
+	st = status -sb
+	unstage = reset HEAD --
+	last = log -1 --stat
+	cp = cherry-pick
+	co = checkout
+	cl = clone
+	ci = commit
+	br = branch
+	dc = diff --cached
+	dtc = difftool --cached
+	lag = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %Cblue<%an>%Creset' --abbrev-commit --all -20
+	llg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %Cblue<%an>%Creset' --abbrev-commit -20
+	dt = difftool
+	mt = mergetool
+	tags = !"git for-each-ref \
+    --sort=-taggerdate --count=20 \
+    --format '%(tag)_,,,_%(taggerdate:raw)_,,,_%(taggername)_,,,_%(subject)' refs/tags \
+    | awk 'BEGIN { FS = \"_,,,_\"  } ; { t=strftime(\"%Y-%m-%d  %H:%M\",$2); printf \"%-20s %-18s %-25s %s\\n\", t, $1, $4, $3  }'"
+[i18n]
+	commitencoding = utf-8
+	logoutputencoding = utf-8
+[gui]
+	encoding = utf-8
+[i18n "commit"]
+	encoding = gbk
+[user]
+	name = thinblackcat
+	email = thinblackcat@sina.com
