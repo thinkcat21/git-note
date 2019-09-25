@@ -23,3 +23,6 @@
     git log --grep <comment>
     git log --grep <comment> --online  #单行输出
     #<comment>为关键词，如：git log --grep 订单列表优化 --oneline
+    
+### reset revert checkout区别
+https://segmentfault.com/a/1190000009126517
